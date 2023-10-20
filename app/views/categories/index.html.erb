@@ -1,0 +1,23 @@
+<div class="">
+  <h1 class=" ">Budget Beam</h1>
+  <div class=" ">
+          <% if @categories.empty?%>
+      <p class=" ">You don't have any categories yet !!</p>
+        <% else %>
+          <ul class=" ">
+              <% @categories.each do |cat| %>
+                  <%= link_to category_spendings_path(category_id: cat.id), class:'' do %>
+                      <li class=" ">
+                          <div class=" "><%= cat.icon %></div>
+                          <div class=" "><%= cat.name %></div>
+                          <div class=" ">$ <%= cat.spendings.sum(:amount)%>
+                      </li>
+                  <% end %>
+              <% end %>
+          </ul>
+        <% end %>
+  </div>
+
+  <div><%= link_to 'Create New Category', new_category_path, class: '' %>
+</div>
+</div>

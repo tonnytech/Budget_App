@@ -1,0 +1,31 @@
+<div>
+<div class="">
+  <% if @spendigs.empty?%>
+    <p class="">You don't have any transactions yet !!</p>
+        <% else %>
+            <ul class="">
+                <li class="">
+                    <div class=" ">
+                        <div class=" "><%= @category.icon %></div>
+                        <div class=" "><%= @category.name %></div>
+                    </div>
+                    <div class=" ">
+                        <div class=" ">Total spent on this category</div>
+                        <div class=" ">$ <%= number_with_delimiter(@total) %></div>
+                    </div> 
+                </li>
+                <% @spendigs.each do |ex| %>
+                    <li class=" ">
+                        <div class=" ">
+                            <span class=" "><%= ex.name %></span>
+                            <span class=" ">$ <%=  number_with_delimiter(ex.amount)  %></span>
+                        </div>
+                        <div class=" ">
+                            <span class=" "><%= ex.created_at.strftime("%d %B '%Y, %R") %></span>
+                        </div>
+                    </li>
+                <% end %>
+            </ul>
+  <% end %>
+  <%= link_to "Add a new Transaction", new_category_spending_path(@category), class: '' %>
+</div>
