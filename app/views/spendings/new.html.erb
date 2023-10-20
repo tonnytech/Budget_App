@@ -1,0 +1,11 @@
+<div>
+  <%= form_with model: @spending, url: category_spendings_path(@category), class:'' do |form| %>
+    <div class="">
+          <div class="">
+            <%= form.text_field :name,  placeholder: "New Transaction", class: '', required: true %>
+            <%= form.number_field :amount, placeholder: "Amount (USD)", class: '', required: true %>
+          </div>
+    </div>
+    <%= form.submit "Save", class: ''%>
+  <% end %>
+</div>
