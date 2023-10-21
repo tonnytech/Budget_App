@@ -2,9 +2,9 @@
   <section class='mainCoverTwo'>
     <section class='header'>
     <div class='headerOne'>
-      <div>H</div>
+      <div class="imageElement"> <%= image_tag("menu.png", :alt => "menu feed", class: "imageElement")%> </div>
       <div>Transactions</div>
-      <div>S</div>
+      <div><%= image_tag("search.png", :alt => "menu feed", class: "imageElement")%></div>
     </div>
     <div class="headerTwo">
       <div>Most Recent</div>
@@ -18,9 +18,9 @@
           <% else %>
             <ul class="cartListContainer">
               <% @categories.each do |cat| %>
-                  <%= link_to category_spendings_path(category_id: cat.id), class:'' do %>
+                  <%= link_to category_spendings_path(category_id: cat.id), class:'link' do %>
                       <li class="cartList">
-                          <div class=" "><%= cat.icon %></div>
+                          <div class=""><%= cat.icon %></div>
                           <div class=" "><%= cat.name %></div>
                           <div class=" ">$ <%= cat.spendings.sum(:amount)%>
                       </li>
@@ -29,7 +29,7 @@
             </ul>
           <% end %>
   </section>
-  <div class='categoryButton'><%= link_to 'Create New Category', new_category_path, class: '' %>
+  <div class='categoryButton userSubmitContainer'><%= link_to 'Create New Category', new_category_path, class: '' %>
   </div>
 </div>
   </section>
