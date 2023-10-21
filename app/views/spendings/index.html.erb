@@ -1,5 +1,5 @@
 <section class='mainCover'>
-    <section class='mainCoverTwo'>
+    <section class='mainCoverTwo spendingContainerSection'>
     <section class='header'>
     <div class='headerOne'>
       <div><%=link_to categories_path do %> <%= image_tag("arrow.png", :alt => "menu feed", class: "imageElement") %> <%end%> </div>
@@ -7,7 +7,7 @@
       <div>Add</div>
     </div> 
   </section>
-<div class="mainContainer">
+<div class="mainContainer spendingContainerSection">
 <div class="">
   <% if @spendigs.empty?%>
     <p class="">You don't have any transactions yet !!</p>
@@ -39,4 +39,7 @@
   <div class='categoryButton userSubmitContainer'><%= link_to "Add a new Transaction", new_category_spending_path(@category), class: '' %></div>
 </div>
     </section>
+     <div class='scanSpendings'>
+    <div class='scanElement'> Scan </div>
+    </div>
 </section>
