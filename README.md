@@ -37,6 +37,8 @@
 # 📖 [Budget_app_Rails]
  <a name="about-project"></a>
 The Recipe App is a classic example of a foods website. It will be fully up and a functional website that will show the list of foods and empower users to interact with them by adding recipes,ingredients and generating shopping list.
+
+
 ## 🛠 Built With <a name="built-with"></a>
 Ruby
 
@@ -74,7 +76,7 @@ Ruby
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- N/A
+video presentation: https://www.loom.com/share/2db0feec45294fe9b11fbb03a853b642
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
