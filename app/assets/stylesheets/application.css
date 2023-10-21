@@ -231,7 +231,7 @@ form:focus-within .formInput {
 }
 
 .snapscan {
-  color: var(--main-color)
+  color: var(--main-color);
 }
 
 .scanContainer {
