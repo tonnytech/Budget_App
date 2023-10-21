@@ -1,16 +1,13 @@
 <section class='mainCover'>
-  <div class="mainContainer">
-  <section class='header'>
+    <section class='mainCoverTwo'>
+    <section class='header'>
     <div class='headerOne'>
       <div>H</div>
       <div>Transactions</div>
       <div>S</div>
-    </div>
-    <div class="headerTwo">
-      <div>Most Recent</div>
-      <div>Most ancient</div>
-    </div>
+    </div> 
   </section>
+          <div class="mainContainer">
 <div class="">
   <% if @spendigs.empty?%>
     <p class="">You don't have any transactions yet !!</p>
@@ -42,4 +39,5 @@
   <% end %>
   <div class='categoryButton'><%= link_to "Add a new Transaction", new_category_spending_path(@category), class: '' %></div>
 </div>
+    </section>
 </section>

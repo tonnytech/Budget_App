@@ -15,7 +15,16 @@
  */
 
  :root {
-    --primary-color: #007bff; /* Define a root variable for primary color */
+    --main-color: #3778c2; /* Define a root variable for primary color */
+    --second-color: #5fb523;
+
+    --text-main-color: #434b54;
+    --text-secondary1-color: #545c67;
+    --text-secondary2-color: #86898e;
+    --text-secondary3-color: #989da3;
+
+    --white-color: #fff;
+    --white-dull-color: #f0f2f1;
   }
 
 li {
@@ -25,24 +34,84 @@ li {
 a {
    text-decoration: none; 
 }
+
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.snapscanContainer {
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userLogins {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.userSubmit {
+    width: 100%
+}
+
+.userSubmitContainer {
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 2rem;
+}
+
+.userSubmitContainer a{
+    color: var(--text-secondary2-color);
+}
+
+.userSubmitContainer:hover {
+background-color: var(--main-color);
+}
+
+.userSubmitContainer:hover a{
+    color: var(--white-color);
+}
+
 .header {
     display: flex;
     flex-direction: column;
     gap:10px;
     padding-bottom: 2rem;
+    padding-top: 2rem;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .mainCover {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-.mainContainer {
-    border: 1px solid black; 
+.mainCoverTwo {
     width: 27rem;
     max-width: 600px;
+    border: 1px solid black;
+}
+
+.mainContainer { 
     padding: 1rem;
     height: 85vh;
+    background-color: var(--white-dull-color);
 }
 
 .headerOne {
@@ -103,6 +172,7 @@ form:focus-within .formInput{
     border-top: none;
     border-left: none;
     border-right: none;
+    background-color: var(--white-color) !important;
 }
 
 .submitContainer {
@@ -110,6 +180,15 @@ form:focus-within .formInput{
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+}
+
+.submitContainer .formSubmit{
+    color: var(--text-secondary2-color);
+}
+
+.submitContainer:hover .formSubmit{
+background-color: var(--main-color);
+color: var(--white-color);
 }
 
 .formSubmit {
@@ -132,6 +211,14 @@ form:focus-within .formInput{
     height: 2rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+}
+
+.sharedLinks {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
 }
 
 @media only screen and (min-width: 440px)  {
