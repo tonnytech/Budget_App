@@ -1,11 +1,28 @@
-<div>
+<section class='mainCover'>
+  <div class="mainContainer">
+  <section class='header'>
+    <div class='headerOne'>
+      <div>H</div>
+      <div>Transactions</div>
+      <div>S</div>
+    </div>
+    <div class="headerTwo">
+      <div>Most Recent</div>
+      <div>Most ancient</div>
+    </div>
+  </section>
+  <section class='formCover'>
   <%= form_with model: @category, url: categories_path, class:'' do |form| %>
     <div class="">
-          <div class=" ">
-            <%= form.text_field :name, placeholder: "New Category", class: '' , required: true%>
-            <%= form.select :icon, options_for_select(@choices, selected: @category.icon), { prompt: "Select the icon" }, class: "" , required: true %>
+          <div class="formContainer">
+            <%= form.select :icon, options_for_select(@choices, selected: @category.icon), { prompt: "Select the icon" }, class: "formInput" , required: true %>
+            <%= form.text_field :name, placeholder: "New Category", class: 'formInput' , required: true%>
           </div>
     </div>
-    <%= form.submit "Save", class: ''%>
+    <div class='submitContainer'>
+    <%= form.submit "Save", class: 'formSubmit'%>
+    </div>
   <% end %>
+  </section>
 </div>
+</section>
