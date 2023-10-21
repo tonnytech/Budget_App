@@ -74,7 +74,8 @@ Ruby
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- N/A
+- 
+deploy link: https://tonny-i1td.onrender.com/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
