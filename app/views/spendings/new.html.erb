@@ -1,16 +1,13 @@
 <section class='mainCover'>
-  <div class="mainContainer">
-  <section class='header'>
+  <section class='mainCoverTwo'>
+   <section class='header'>
     <div class='headerOne'>
       <div>H</div>
       <div>Transactions</div>
       <div>S</div>
     </div>
-    <div class="headerTwo">
-      <div>Most Recent</div>
-      <div>Most ancient</div>
-    </div>
   </section>
+      <div class="mainContainer">
   <section class='formCover'>
   <%= form_with model: @spending, url: category_spendings_path(@category), class:'' do |form| %>
     <div class="">
@@ -25,4 +22,5 @@
   <% end %>
   </section>
 </div>
+  </section>
 </section>

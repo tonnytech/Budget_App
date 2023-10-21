@@ -1,6 +1,6 @@
 <section class='mainCover'>
-  <div class="mainContainer">
-  <section class='header'>
+  <section class='mainCoverTwo'>
+    <section class='header'>
     <div class='headerOne'>
       <div>H</div>
       <div>Transactions</div>
@@ -11,7 +11,7 @@
       <div>Most ancient</div>
     </div>
   </section>
-
+      <div class="mainContainer">
   <section class="cartListCover">
           <% if @categories.empty?%>
             <p class=" ">You don't have any categories yet !!</p>
@@ -32,4 +32,5 @@
   <div class='categoryButton'><%= link_to 'Create New Category', new_category_path, class: '' %>
   </div>
 </div>
+  </section>
 </section>
