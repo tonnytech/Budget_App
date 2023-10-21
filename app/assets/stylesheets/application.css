@@ -252,6 +252,23 @@ form:focus-within .formInput {
   padding: 0.5rem 10rem 0.5rem 10rem;
 }
 
+.scanSpendings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  background-color: var(--second-color);
+  color: var(--white-color);
+  font-size: 1.2rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.spendingContainerSection {
+  border-bottom: none;
+}
+
 @media only screen and (min-width: 440px) {
   .headerTwo {
     display: flex;
