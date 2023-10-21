@@ -2,9 +2,9 @@
     <section class='mainCoverTwo'>
     <section class='header'>
     <div class='headerOne'>
-      <div>H</div>
+      <div><%=link_to categories_path do %> <%= image_tag("arrow.png", :alt => "menu feed", class: "imageElement") %> <%end%> </div>
       <div>Transactions</div>
-      <div>S</div>
+      <div>Add</div>
     </div> 
   </section>
           <div class="mainContainer">
@@ -19,9 +19,8 @@
                         <div class=" "><%= @category.name %></div>
                     </div>
                     <div class=" ">
-                        <div class=" ">Track expenses effortlessly, analyze spending trends,
-                        set budgets, and achieve financial goals with our intuitive spender app.
-                        </div>
+                         <div class="">Total spent on this category</div>
+                        <div class="">$ <%= number_with_delimiter(@total) %></div>
                     </div> 
                 </li>
                 <% @spendigs.each do |ex| %>
@@ -37,7 +36,7 @@
                 <% end %>
             </ul>
   <% end %>
-  <div class='categoryButton'><%= link_to "Add a new Transaction", new_category_spending_path(@category), class: '' %></div>
+  <div class='categoryButton userSubmitContainer'><%= link_to "Add a new Transaction", new_category_spending_path(@category), class: '' %></div>
 </div>
     </section>
 </section>

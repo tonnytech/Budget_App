@@ -33,7 +33,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_17_135501) do
   end
 
   create_table "spendings", force: :cascade do |t|
-    t.text "name"
+    t.string "name"
     t.decimal "amount"
     t.bigint "user_id"
     t.datetime "created_at", null: false
