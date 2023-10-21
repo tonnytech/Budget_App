@@ -1,21 +1,34 @@
-<div>
+<section class='mainCover'>
+  <div class="mainContainer">
+  <section class='header'>
+    <div class='headerOne'>
+      <div>H</div>
+      <div>Transactions</div>
+      <div>S</div>
+    </div>
+    <div class="headerTwo">
+      <div>Most Recent</div>
+      <div>Most ancient</div>
+    </div>
+  </section>
 <div class="">
   <% if @spendigs.empty?%>
     <p class="">You don't have any transactions yet !!</p>
         <% else %>
             <ul class="">
-                <li class="">
-                    <div class=" ">
+                <li class="detailsTitle">
+                    <div class="detailsCategoryIcon">
                         <div class=" "><%= @category.icon %></div>
                         <div class=" "><%= @category.name %></div>
                     </div>
                     <div class=" ">
-                        <div class=" ">Total spent on this category</div>
-                        <div class=" ">$ <%= number_with_delimiter(@total) %></div>
+                        <div class=" ">Track expenses effortlessly, analyze spending trends,
+                        set budgets, and achieve financial goals with our intuitive spender app.
+                        </div>
                     </div> 
                 </li>
                 <% @spendigs.each do |ex| %>
-                    <li class=" ">
+                    <li class="detailsList">
                         <div class=" ">
                             <span class=" "><%= ex.name %></span>
                             <span class=" ">$ <%=  number_with_delimiter(ex.amount)  %></span>
@@ -27,5 +40,6 @@
                 <% end %>
             </ul>
   <% end %>
-  <%= link_to "Add a new Transaction", new_category_spending_path(@category), class: '' %>
+  <div class='categoryButton'><%= link_to "Add a new Transaction", new_category_spending_path(@category), class: '' %></div>
 </div>
+</section>
