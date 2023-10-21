@@ -188,6 +188,8 @@ If you like this project so please don't forget to give it a star.
 
 We would like to thank all code reviewers for making this project better.
 
+- I would also like to give credit to [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) the [author of the original design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=), as required by the [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
