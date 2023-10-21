@@ -1,0 +1,30 @@
+<section class='mainCover'>
+  <section class='mainCoverTwo spendingContainerSection'>
+   <section class='header'>
+    <div class='headerOne'>
+      <div><%=link_to category_spendings_path(@category) do %> <%= image_tag("arrow.png", :alt => "menu feed", class: "imageElement") %><%end%></div>
+      <div>Transactions</div>
+      <div>Add</div>
+    </div>
+  </section>
+      <div class="mainContainer">
+  <section class='formCover'>
+  <%= form_with model: @spending, url: category_spendings_path(@category), class:'' do |form| %>
+    <div class="">
+          <div class="formContainer">
+            <%= form.text_field :name,  placeholder: "New Transaction", class: 'formInput', required: true %>
+            <%= form.number_field :amount, placeholder: "Amount (USD)", class: 'formInput', required: true %>
+          </div>
+    </div>
+    <div class='submitContainer'>
+    <%= form.submit "Save", class: 'formSubmit'%>
+    </div>
+  <% end %>
+  </section>
+</div>
+
+  </section>
+   <div class='scanSpendings'>
+    <div class='scanElement'> Scan </div>
+    </div>
+</section>

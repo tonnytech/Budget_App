@@ -1,0 +1,29 @@
+<section class='mainCover'>
+  <section class='mainCoverTwo'>
+  <section class='header'>
+    <div class='headerOne'>
+      <div>H</div>
+      <div>Login</div>
+      <div>login</div>
+    </div>
+  </section>
+     <div class="mainContainer">
+  <section class='formCover'>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div>
+    <div class="formContainer">
+        <%= f.email_field :email, autofocus: true, autocomplete: "Email", class: "formInput",placeholder: "email" %>
+        <%= f.password_field :password, autocomplete: "Password", class: "formInput", placeholder: "password" %>
+        <div class='userSubmitContainer submitContainer'>
+        <%= f.submit "Log in", class: 'formSubmit' %>
+        </div>
+    </div>
+    </div>
+    <% end %>
+    <div class='sharedLinks'>
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+  </section>
+  </section>
+</section>
