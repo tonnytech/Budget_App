@@ -76,8 +76,7 @@ Ruby
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-deploy link: https://tonny-i1td.onrender.com/
-video presentation: https://www.loom.com/share/2db0feec45294fe9b11fbb03a853b642
+[deploy link](https://tonny-i1td.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
