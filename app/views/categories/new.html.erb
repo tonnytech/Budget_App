@@ -1,0 +1,29 @@
+<section class='mainCover'>
+  <section class='mainCoverTwo'>
+    <section class='header'>
+    <div class='headerOne'>
+      <div><%=link_to categories_path do %><%= image_tag("arrow.png", :alt => "menu feed", class: "imageElement") %> <%end%></div>
+      <div>Transactions</div>
+      <div>New</div>
+    </div>
+  </section>
+      <div class="mainContainer">
+  <section class='formCover'>
+  <%= form_with model: @category, url: categories_path, class:'' do |form| %>
+    <div class="">
+          <div class="formContainer">
+            <%= form.select :icon, options_for_select(@choices, selected: @category.icon), { prompt: "Select the icon" }, class: "formInput" , required: true %>
+            <%= form.text_field :name, placeholder: "New Category", class: 'formInput' , required: true%>
+          </div>
+    </div>
+    <div class='submitContainer'>
+    <%= form.submit "Save", class: 'formSubmit'%>
+    </div>
+  <% end %>
+  </section>
+</div>
+   <div class='scanContainer'>
+    <div class='scanElement'> Scan </div>
+    </div>
+  </section>
+</section>

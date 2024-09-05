@@ -1,0 +1,45 @@
+<section class='mainCover'>
+    <section class='mainCoverTwo spendingContainerSection'>
+    <section class='header'>
+    <div class='headerOne'>
+      <div><%=link_to categories_path do %> <%= image_tag("arrow.png", :alt => "menu feed", class: "imageElement") %> <%end%> </div>
+      <div>Transactions</div>
+      <div>Add</div>
+    </div> 
+  </section>
+<div class="mainContainer spendingContainerSection">
+<div class="">
+  <% if @spendigs.empty?%>
+    <p class="">You don't have any transactions yet !!</p>
+        <% else %>
+            <ul class="">
+                <li class="detailsTitle">
+                    <div class="detailsCategoryIcon">
+                        <div class=" "><%= @category.icon %></div>
+                        <div class=" "><%= @category.name %></div>
+                    </div>
+                    <div class=" ">
+                         <div class="">Total spent on this category</div>
+                        <div class="">$ <%= number_with_delimiter(@total) %></div>
+                    </div> 
+                </li>
+                <% @spendigs.each do |ex| %>
+                    <li class="detailsList">
+                        <div class=" ">
+                            <span class=" "><%= ex.name %></span>
+                            <span class=" ">$ <%=  number_with_delimiter(ex.amount)  %></span>
+                        </div>
+                        <div class=" ">
+                            <span class=" "><%= ex.created_at.strftime("%d %B '%Y, %R") %></span>
+                        </div>
+                    </li>
+                <% end %>
+            </ul>
+  <% end %>
+  <div class='categoryButton userSubmitContainer'><%= link_to "Add a new Transaction", new_category_spending_path(@category), class: '' %></div>
+</div>
+    </section>
+     <div class='scanSpendings'>
+    <div class='scanElement'> Scan </div>
+    </div>
+</section>

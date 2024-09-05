@@ -1,0 +1,40 @@
+<section class='mainCover'>
+  <section class='mainCoverTwo'>
+    <section class='header'>
+    <div class='headerOne'>
+      <div class="imageElement"> <%= image_tag("menu.png", :alt => "menu feed", class: "imageElement")%> </div>
+      <div>Transactions</div>
+      <div><%= image_tag("search.png", :alt => "menu feed", class: "imageElement")%></div>
+    </div>
+    <div class="headerTwo">
+      <div>Most Recent</div>
+      <div>Most ancient</div>
+    </div>
+  </section>
+      <div class="mainContainer">
+  <section class="cartListCover">
+          <% if @categories.empty?%>
+            <p class=" ">You don't have any categories yet !!</p>
+          <% else %>
+            <ul class="cartListContainer">
+              <% @categories.each do |cat| %>
+                  <%= link_to category_spendings_path(category_id: cat.id), class:'link' do %>
+                      <li class="cartList">
+                          <div class=""><%= cat.icon %></div>
+                          <div class=" "><%= cat.name %></div>
+                          <div class=" ">$ <%= cat.spendings.sum(:amount)%>
+                      </li>
+                  <% end %>
+              <% end %>
+            </ul>
+          <% end %>
+  </section>
+  <div class='categoryButton userSubmitContainer'>
+    <%= link_to 'Create New Category', new_category_path, class: '' %>
+  </div>
+</div>
+ <div class='scanContainer'>
+    <div class='scanElement'> Scan </div>
+    </div>
+  </section>
+</section>
